@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Arithmetic Calculations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Settings Section -->
+    <div id="settings">
+      <h2>Settings</h2>
+      <label>Number of Questions:</label>
+      <input type="number" id="numQuestions" min="1" max="20" value="5">
+      
+      <label>Number Range:</label>
+      <input type="number" id="minRange" placeholder="Min" value="1">
+      <input type="number" id="maxRange" placeholder="Max" value="10">
+      
+      <label>Arithmetic Operations:</label>
+      <div>
+        <input type="checkbox" id="add" checked> Addition
+        <input type="checkbox" id="subtract"> Subtraction
+        <input type="checkbox" id="multiply"> Multiplication
+        <input type="checkbox" id="divide"> Division
+      </div>
+      
+      <label>Timer (seconds per question):</label>
+      <input type="number" id="timer" value="15">
+      
+      <button id="startQuiz">Start Quiz</button>
+    </div>
+
+    <!-- Questionnaire Section -->
+    <div id="questionnaire" style="display: none;">
+      <h2>Questionnaire</h2>
+      <p id="question"></p>
+      <input type="number" id="userAnswer" placeholder="Enter your answer">
+      <button id="nextQuestion">Next Question</button>
+      <p id="questionProgress"></p>
+      <p id="timerDisplay"></p>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result" style="display: none;">
+      <h2>Results</h2>
+      <p id="score"></p>
+      <p id="percentage"></p>
+      <button id="retryQuiz">Retry Quiz</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
